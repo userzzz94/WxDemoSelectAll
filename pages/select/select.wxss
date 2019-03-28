@@ -1,0 +1,47 @@
+/* pages/select/select.wxss */
+.select_icon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.select_all_icon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: 10rpx;
+}
+
+
+/*  重写 checkbox 样式  */
+
+/* 未选中的 背景样式 */
+
+checkbox .wx-checkbox-input {
+  width: 30rpx; /* 背景的宽 */
+  height: 30rpx; /* 背景的高 */
+  border-radius: 20rpx;
+  margin-left: 10rpx;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #09f;
+  margin-left: 10rpx;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 30rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 24rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

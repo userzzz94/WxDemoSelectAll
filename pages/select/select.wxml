@@ -1,0 +1,17 @@
+<!--pages/select/select.wxml-->
+<checkbox-group class="checkbox-group" bindchange="checkboxChange" data-id='{{item.Id}}' wx:for-index='index' wx:for-item='item' data-checked="{{item.checked}}">
+        <block wx:for="{{fapiaos}}" wx:key="*fapiaos" data-id='{{item.Id}}' wx:for-index='index' wx:for-item='item'>
+          <view class='block_item'>
+            <checkbox class='title_checkbox' checked='{{item.checked}}' value="{{index}}" id="{{index}}" data-id="{{item.Id}}">
+            </checkbox>
+          </view>
+        </block>
+      </checkbox-group>
+
+
+              <view wx:if="{{!select_all}}" class='select_icon'>
+          <icon type="circle" size="15" bindtap="selectall" class='select_all_icon' /> 全选
+        </view>
+        <view wx:else="{{select_all}}" class='select_icon'>
+          <icon type="success" size="15" color='#09f' bindtap="selectall" class='select_all_icon' /> 取消全选
+        </view>
